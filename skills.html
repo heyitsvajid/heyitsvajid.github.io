@@ -173,7 +173,33 @@
     <!--================End Contact Success and Error message Area =================-->
 
 
+    <!--================ Visitor Track Area Start =================-->
 
+
+	<script>
+		function ready() {
+			var denizen = new Denizen();
+			data = denizen.getData();
+			var template_params = {
+				"visited":localStorage.getItem('visited'),
+				"visitedOn" : localStorage.getItem('visitedOn'),
+				"message": JSON.stringify(data)
+			}
+			var service_id = "default_service";
+			var template_id = "template_9rHUIb54";
+			emailjs.send(service_id, template_id, template_params);
+			localStorage.setItem('visited', "true");
+			localStorage.setItem('visitedOn', new Date().toLocaleString());
+		}
+	</script>
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("user_Owoxb5SECdKV4vDMTyAhG");
+		})();
+	</script>
+
+    <!--================ Visitor Track Area End =================-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
