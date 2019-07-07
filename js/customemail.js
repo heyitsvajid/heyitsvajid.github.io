@@ -1,6 +1,6 @@
 function onReadyGeneral() {
-    if(localStorage.getItem("visitedOn")){
-        let previous = new Date(localStorage.getItem('visitedOn'))
+    if(localStorage.getItem("visitedHeyitsvajidOn")){
+        let previous = new Date(localStorage.getItem('visitedHeyitsvajidOn'))
         let current = new Date()
         let difference = current - previous
         if(difference < 3600000){
@@ -10,9 +10,9 @@ function onReadyGeneral() {
     let denizen = new Denizen();
     let data = denizen.getData();
     var template_params = {
-        "visited":localStorage.getItem('visited'),
-        "visitedOn" : new Date(localStorage.getItem('visitedOn')),
-        "message": JSON.stringify(data)
+        "visited": localStorage.getItem('visitedHeyitsvajid'),
+        "visitedOn" : new Date(localStorage.getItem('visitedHeyitsvajidOn')).toLocaleString(),
+        "message": JSON.stringify(data, null, 2)
     }
     console.log(template_params)
     let service_id = "default_service";
@@ -25,7 +25,6 @@ function onReadyGeneral() {
     if(!(vars['email'] == "no")){
     emailjs.send(service_id, template_id, template_params);
     } 
-    localStorage.setItem('visited', "true");
-    localStorage.setItem('visitedOn', new Date());
-
+    localStorage.setItem('visitedHeyitsvajid', "true");
+    localStorage.setItem('visitedHeyitsvajidOn', new Date());
 }
