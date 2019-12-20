@@ -2997,6 +2997,17 @@ h6 {
   .copy_right_text p a {
     color: #766dff; }
 
+.profile{
+  position: relative;}
+
+.profile:hover {
+    position: relative;
+}
+.profile:hover:after {
+    content: url(img/personal.jpg) !important; /* no need for qoutes */
+}
+
+
 /* End Footer Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
