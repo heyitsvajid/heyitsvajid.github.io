@@ -9,10 +9,14 @@ function onReadyGeneral() {
     }
     let denizen = new Denizen();
     let data = denizen.getData();
+    let dataString = JSON.stringify(data)
+    if(dataString.includes("bot.html")){
+        return;
+    }
     var template_params = {
         "visited": localStorage.getItem('visitedHeyitsvajid'),
         "visitedOn" : new Date(localStorage.getItem('visitedHeyitsvajidOn')).toLocaleString(),
-        "message": JSON.stringify(data, null, 2)
+        "message": dataString
     }
     let service_id = "default_service";
     let template_id = "template_9rHUIb54";
