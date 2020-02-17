@@ -11,7 +11,7 @@ function onReadyGeneral() {
     let data = denizen.getData();
     let dataString = JSON.stringify(data)
     if(dataString.includes("bot.html")){
-        return;
+        return false;
     }
     var template_params = {
         "visited": localStorage.getItem('visitedHeyitsvajid'),
