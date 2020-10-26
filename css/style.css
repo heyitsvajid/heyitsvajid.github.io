@@ -301,9 +301,9 @@ button:focus {
 .home_banner_area {
   position: relative;
   z-index: 1;
-  background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-  background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background-image: -moz-linear-gradient(0deg, #373B44 0%, #4286f4 100%);
+  background-image: -webkit-linear-gradient(0deg, #373B44 0%, #4286f4 100%);
+  background-image: -ms-linear-gradient(0deg, #373B44 0%, #4286f4 100%);
   margin-bottom: 200px; }
   .home_banner_area .box_1620 {
     min-height: 700px;
@@ -315,7 +315,6 @@ button:focus {
     box-shadow: 0px 20px 80px 0px rgba(153, 153, 153, 0.3); }
   .home_banner_area .banner_inner {
     position: relative;
-    width: 100%;
     min-height: 700px;
     display: flex; }
     .home_banner_area .banner_inner .banner_content {
@@ -378,9 +377,9 @@ button:focus {
   position: relative;
   z-index: 1;
   min-height: 350px;
-  background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-  background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background-image: -moz-linear-gradient(0deg, #373B44 0%, #4286f4 100%);
+  background-image: -webkit-linear-gradient(0deg, #373B44 0%, #4286f4 100%);
+  background-image: -ms-linear-gradient(0deg, #373B44 0%, #4286f4 100%);
   margin-bottom: 120px; }
   .banner_area .box_1620 {
     background: #fff;
