@@ -60,9 +60,9 @@ a {
   margin: 0px; }
 
 body {
-  line-height: 26px;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  line-height:30px;
+  font-size: 18px;
+  font-family: Helvetica Neue, Arial, sans-serif !important;
   font-weight: normal;
   color: black; }
 
@@ -2550,9 +2550,9 @@ h6 {
 /* My Tabs Area css
 ============================================================================================ */
 .mytabs_area {
-  background-image: -moz-linear-gradient(0deg, #373B44 0%, #4286f4 50%);
-  background-image: -webkit-linear-gradient(0deg, #373B44 0%, #4286f4 50%);
-  background-image: -ms-linear-gradient(0deg, #373B44 0%, #4286f4 50%); }
+  background-image: -moz-linear-gradient(0deg, #4286f4 0%, #4286f4 50%);
+  background-image: -webkit-linear-gradient(0deg, #4286f4 0%, #4286f4 50%);
+  background-image: -ms-linear-gradient(0deg, #4286f4 0%, #4286f4 50%); }
 
 .tabs_inner .nav.nav-tabs {
   display: block;
