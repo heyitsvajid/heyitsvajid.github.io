@@ -16,7 +16,11 @@ function onReadyGeneral() {
     var template_params = {
         "visited": localStorage.getItem('visitedHeyitsvajid'),
         "visitedOn" : new Date(localStorage.getItem('visitedHeyitsvajidOn')).toLocaleString(),
-        "message": dataString
+        "browser-version": data.browser.version,
+        "platform": data.platform.operatingSystem,
+        "screen": data.platform.screen.height + " x " + data.platform.screen.width,
+        "url": data.session.url,
+        "referrer": data.session.history.referrer
     }
     let service_id = "default_service";
     let template_id = "template_9rHUIb54";
