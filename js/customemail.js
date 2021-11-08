@@ -36,6 +36,45 @@ function onReadyGeneral() {
     localStorage.setItem('visitedHeyitsvajidOn', new Date());
 }
 
+
+function onVisitContactPage() {
+    if(localStorage.getItem("visitedHeyitsvajidContactOn")){
+        let previous = new Date(localStorage.getItem('visitedHeyitsvajidContactOn'))
+        let current = new Date()
+        let difference = current - previous
+        if(difference < 3600000){
+            return;
+        }
+    }
+    let denizen = new Denizen();
+    let data = denizen.getData();
+    let dataString = JSON.stringify(data)
+    if(dataString.includes("bot.html")){
+        return false;
+    }
+    var template_params = {
+        "visited": localStorage.getItem('visitedHeyitsvajidContact'),
+        "visitedOn" : new Date(localStorage.getItem('visitedHeyitsvajidContactOn')).toLocaleString(),
+        "browser-version": data.browser.version,
+        "platform": data.platform.operatingSystem,
+        "screen": data.platform.screen.height + " x " + data.platform.screen.width,
+        "url": data.session.url,
+        "referrer": data.session.history.referrer
+    }
+    let service_id = "default_service";
+    let template_id = "template_9rHUIb54";
+    
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    if(!(vars['email'] == "no")){
+    emailjs.send(service_id, template_id, template_params);
+    } 
+    localStorage.setItem('visitedHeyitsvajidContact', "true");
+    localStorage.setItem('visitedHeyitsvajidContactOn', new Date());
+}
+
 function openResume(){
     if(localStorage.getItem("downloadedHeyitsvajidResumeOn")){
         let previous = new Date(localStorage.getItem('downloadedHeyitsvajidResumeOn'))
