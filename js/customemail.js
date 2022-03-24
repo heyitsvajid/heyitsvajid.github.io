@@ -81,6 +81,7 @@ function openResume(){
         let current = new Date()
         let difference = current - previous
         if(difference < 3600000){
+            window.open('./Vajid_Kagdi_Resume.pdf', '_blank');
             return;
         }
     }
