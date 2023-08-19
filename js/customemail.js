@@ -10,7 +10,7 @@ function onReadyGeneral() {
     let denizen = new Denizen();
     let data = denizen.getData();
     let dataString = JSON.stringify(data)
-    if(dataString.includes("bot.html")){
+    if(dataString.includes("bot.html") || dataString.includes("ahrefs") || dataString.includes("applebot")){
         return false;
     }
     var template_params = {
